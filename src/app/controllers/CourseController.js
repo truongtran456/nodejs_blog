@@ -2,7 +2,6 @@
 const Course= require('../models/Course');
 const {mutipleMongooseToObject, mongooseToObject} = require('../../util/mongoose');
 
-
 class CourseController {
     //[GET] /show
     show(req, res, next){
@@ -16,7 +15,6 @@ class CourseController {
     create(req, res, next){
        res.render('courses/create');
     };
-
 
     store(req, res, next){
         req.body.image=`https://img.youtube.com/vi/${req.body.videoId}/sddefault.jpg`;//link video tu dong tach ra o link anh
