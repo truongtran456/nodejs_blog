@@ -1,4 +1,3 @@
-
 const Course= require('../models/Course');
 const {mutipleMongooseToObject, mongooseToObject} = require('../../util/mongoose');
 
@@ -43,7 +42,6 @@ class CourseController {
             .catch(next);
      }
 
-     
     //  [DELETE] /courses/:id =>===>>>>>> XOA THAT
     // destroy(req, res, next) {
     //     const id_product = req.path.replace('/', '');
