@@ -24,3 +24,4 @@ Course.plugin(mongooseDelete,{
 });
 
 module.exports = mongoose.model('Course', Course);
+
