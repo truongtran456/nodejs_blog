@@ -71,6 +71,7 @@ class CourseController {
             .catch(next);
         }
 
+    
         // [POST] /course/handle-form-actions
         handleFormActions(req, res, next){
             switch(res.body.action){
