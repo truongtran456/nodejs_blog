@@ -1,5 +1,7 @@
+
 const Course= require('../models/Course');
 const {mutipleMongooseToObject, mongooseToObject} = require('../../util/mongoose');
+
 
 class CourseController {
     //[GET] /show
@@ -14,6 +16,7 @@ class CourseController {
     create(req, res, next){
        res.render('courses/create');
     };
+
 
     store(req, res, next){
         req.body.image=`https://img.youtube.com/vi/${req.body.videoId}/sddefault.jpg`;//link video tu dong tach ra o link anh
@@ -42,6 +45,7 @@ class CourseController {
             .catch(next);
      }
 
+     
     //  [DELETE] /courses/:id =>===>>>>>> XOA THAT
     // destroy(req, res, next) {
     //     const id_product = req.path.replace('/', '');
@@ -71,10 +75,9 @@ class CourseController {
             .catch(next);
         }
 
-    
         // [POST] /course/handle-form-actions
         handleFormActions(req, res, next){
-            switch(res.body.action){
+            switch(req.body.action){
                 case 'delete':
                     Course.delete({ _id: { $in: req.body.courseIds }})
                         .then(() => res.redirect('back'))//chuyen toi view tip theo
