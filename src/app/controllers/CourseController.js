@@ -44,7 +44,6 @@ class CourseController {
             .catch(next);
      }
 
-     
     //  [DELETE] /courses/:id =>===>>>>>> XOA THAT
     // destroy(req, res, next) {
     //     const id_product = req.path.replace('/', '');
@@ -86,10 +85,6 @@ class CourseController {
                     res.json({message :' Action is invalid' });
             }
         }
-
-
-
-
 }
 module.exports = new CourseController;
   
