@@ -36,6 +36,7 @@ app.engine(
         sum:(a,b) => a+b, //cho phep thuc hien phep + trong view
     },
   })
+  
 );
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, 'resources','views'));
